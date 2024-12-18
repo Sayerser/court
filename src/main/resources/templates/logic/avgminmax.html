@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информация о ценах и юристах</title>
+  <link rel="stylesheet" href="/avgminmax.css"> <!-- Подключаем стиль -->
+</head>
+<body>
+<header>
+  <div class="logo">
+    <h1>Онлайн адвокат</h1>
+  </div>
+</header>
+
+<section id="price-section">
+  <h2>Статистика по ценам на услуги</h2>
+  <div id="price-statistics">
+    <p><strong>Максимальная цена:</strong> <span th:text="${priceStatistics.max_price}">Загрузка...</span></p>
+    <p><strong>Минимальная цена:</strong> <span th:text="${priceStatistics.min_price}">Загрузка...</span></p>
+    <p><strong>Средняя цена:</strong> <span th:text="${priceStatistics.avg_price}">Загрузка...</span></p>
+  </div>
+</section>
+
+</body>
+</html>

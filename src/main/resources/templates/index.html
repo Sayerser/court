@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн адвокат</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>Онлайн адвокат</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero">
+    <div class="hero-content">
+        <h2>Нужен адвокат? Заказывайте онлайн!</h2>
+        <button onclick="redirectToCreateTicket()">Оставить заявку</button>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Выберите то, что интересует</h2>
+    <div class="services-list">
+        <div class="service-item">
+            <a href="/lawyers">
+                <h3>Наши адвокаты</h3>
+                <p>Вы можете ознакомиться со всеми юристами и их специализацией</p>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="/case-details">
+                <h3>Дела</h3>
+                <p>Здесь вы можете увидеть работу наших адвокатов. Посмотреть их дела и оценить занятость, если есть цель обратиться</p>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="/services">
+                <h3>Предложения</h3>
+                <p>Посмотрите, какие услуги предлагают адвокаты и на чем они специализируются</p>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="/avg-price">
+                <h3>Цены</h3>
+                <p>Мы работаем с адвокатами напрямую, потому и приятные цены. В этом разделе вы можете узнать
+                    Как среднюю цену по всем делам, так максимальную и минимальную, чтобы примерно сориентроваться
+                    по ценам</p>
+            </a>
+        </div>
+
+        <div class="service-item">
+            <a href="/best-lawyers">
+                <h3>Лучшие адвокаты</h3>
+                <p>В этой вкладке вы можете увидеть лучших адвокатов нашей платформы и быть уверенными в том,
+                к кому стоить обратиться</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function redirectToCreateTicket() {
+        window.location.href = '/create-ticket';
+    }
+</script>
+
+</body>
+</html>

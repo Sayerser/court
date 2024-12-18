@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список адвокатов</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Путь к CSS стилям -->
+    <style>
+        /* Основной стиль страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Заголовки */
+        header {
+            background-color: #2d3a3f;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2d3a3f;
+        }
+
+        /* Основной блок с таблицей */
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Стилизация таблицы */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover td {
+            background-color: #e1f5e1;
+        }
+
+        /* Стилизация кнопки */
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Мобильная версия */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Можете напрямую связаться через email</h1>
+</header>
+
+<section>
+    <h2>Наши адвокаты (чтобы узнать подробнее об адвокате нажмите на него)</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Специализация</th>
+            <th>email</th>
+            <th> Рейтинг </th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Перебираем список адвокатов и выводим их данные -->
+        <tr th:each="lawyer : ${lawyers}">
+            <td th:text="${lawyer.name}"></td>
+            <td th:text="${lawyer.surname}"></td>
+            <td th:text="${lawyer.specialization}"></td>
+            <td th:text = "${lawyer.email}"></td>
+            <td th:text = "${lawyer.ratingValue}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Кнопка для возврата на главную или другие действия -->
+    <a href="/" class="btn">Вернуться на главную</a>
+</section>
+
+</body>
+</html>

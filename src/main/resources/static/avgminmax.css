@@ -1,0 +1,44 @@
+/* Пример простых стилей */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#price-section, #lawyers-section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+#lawyer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#lawyer-table th, #lawyer-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#lawyer-table th {
+    background-color: #f2f2f2;
+}
+
+#price-statistics p {
+    font-size: 1.2em;
+}

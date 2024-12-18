@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lawyer Services</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+    .card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card h2 {
+        margin: 10px 0 5px;
+        color: #333;
+    }
+    .card p {
+        margin: 5px 0;
+        color: #555;
+    }
+    .card .price {
+        color: #28a745;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    .card .category {
+        color: #007bff;
+        font-size: 0.9em;
+    }
+    .card .email {
+        color: #6c757d;
+        font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Карточки адвокатов -->
+  <div th:each="lawyer : ${lawyers}" class="card">
+    <h2 th:text="${lawyer.lawyerName} + ' ' + ${lawyer.lawyerSurname}"></h2>
+    <p th:text="'Email: ' + ${lawyer.email}" class="email"></p>
+    <p th:text="${lawyer.serviceName}"></p>
+    <p th:text="${lawyer.description}"></p>
+    <p th:text="'Price: $' + ${lawyer.basePrice}" class="price"></p>
+    <p th:text="'Category: ' + ${lawyer.categoryName}" class="category"></p>
+  </div>
+</div>
+</body>
+</html>

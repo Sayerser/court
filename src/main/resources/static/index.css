@@ -1,0 +1,103 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+#hero {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h2 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+button {
+    background-color: #fff;
+    color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+#services .services-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#services .service-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Убираем синие цвета и подчеркивание с ссылок */
+#services .service-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#services .service-item a:hover {
+    color: inherit; /* Текст остается того же цвета при наведении */
+}
+
+/* Эффект увеличения и тени при наведении */
+.service-item:hover {
+    transform: scale(1.05); /* Увеличение на 5% */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+}
